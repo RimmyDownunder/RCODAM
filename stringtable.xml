@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name = "RCOP">
+    <Package name = "Modules">
+        <Key ID = "STR_RCODAM_Modules_GeneralSettings_description">
+            <English>This module controls the general settings for the DAM mod and is required for the system to work.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_mineSide_description">
+            <English>Decides which side these mine-laying settings are for. Multiple modules can set multiple sides to use mines.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_groupLimitChoice_tooltip">
+            <English>How many groups have to be spotted or be present in an area for the detection script to sort them into a Taskforce.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_groupSizeLimitChoice_tooltip">
+            <English>How many members of the same group have to be in the area for it to count as a group spotting.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_forgetTimer_tooltip">
+            <English>How long until the side forgets about a group's, that they previously spotted, last location.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_runIfEmpty_tooltip">
+            <English>If the detection and objective creation scripts will keep running without any current mine-laying groups. This will allow more to be spawned in.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_needTaskForceforIntercept_tooltip">
+            <English>If a group observed moving along a location will need to be part of a Taskforce before an intercept mine objective is attempted against them.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_mineChance_tooltip">
+            <English>From 0-1, with 0.5 being 50%, how likely the system is to assign a Mine Objective at all each cycle.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_defenceChance_tooltip">
+            <English>From 0-1, weighed against the other objective chances, how likely a Defence Mine Objective will be chosen over the other styles.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_interceptChance_tooltip">
+            <English>From 0-1, weighed against the other objective chances, how likely an Intercept Mine Objective will be chosen over the other styles.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_interdictChance_tooltip">
+            <English>From 0-1, weighed against the other objective chances, how likely an Interdict Mine Objective will be chosen over the other styles.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_roadChance_tooltip">
+            <English>From 0-1, with 0.5 being 50%, how likely the objective chosen is to prefer a nearby road to the objective location if possible.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_furthestTravel_tooltip">
+            <English>The furthest distance a mine group will travel to reach an objective. Objectives further away will be denied.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_ATMines_tooltip">
+            <English>If using mods, add anything considered an anti-tank mine to this list. Vanilla AT mines are already included. e.g. ["ATMine_Range_Mag","SLAMDirectionalMine_Wire_Mag"]</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_minimumMineCount_tooltip">
+            <English>The minimum number of mines a group must have to still be considered a 'mine laying group'. This cannot go lower than 4 mines.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_groupDetector_tooltip">
+            <English>Any AI group with more mines than the minimum amount will be automatically added to the mine-laying group list for their side each scan cycle.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_debugMode_tooltip">
+            <English>Enables debug mode for testing.</English>
+        </Key>
+		
+		<Key ID = "STR_RCODAM_Modules_RestrictObjective_description">
+            <English>Any group leader synced to this module will only complete the chosen objectives. So they'll only build Defence Objective minefields, or Intercept Objectives, etc. Unsynced groups will complete all objectives.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_RestrictTooltip_tooltip">
+            <English>Tick this box to allow the group to complete these objectives.</English>
+        </Key>
+		
+		<Key ID = "STR_RCODAM_Modules_CreateExclusionZone_description">
+            <English>This module will spawn a zone that prevents the CENTRE of any minefield from being placed inside of it. It does not prevent mines from being placed inside of it, so be generous with the width.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_side_tooltip">
+            <English>The side will be excluded from planting minefields here.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_radiusX_tooltip">
+            <English>The X radius of the exclusion zone.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_radiusY_tooltip">
+            <English>The Y radius of the exclusion zone.</English>
+        </Key>
+		<Key ID = "STR_RCODAM_Modules_debug_tooltip">
+            <English>If the zone will be visible.</English>
+        </Key>
+		
+		<Key ID = "STR_RCODAM_Modules_AddMineLayerGroup_description">
+            <English>Any group synced to this module will be added to the list of mine laying groups. Only one member of the group needs to be synced to this module.</English>
+        </Key>
+		
+    </Package>
+</Project>
