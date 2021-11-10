@@ -10,7 +10,8 @@ _inventoryToCheck = _inventoryToCheck + vestItems _unitToCheck;
 _inventoryToCheck = _inventoryToCheck + backpackItems _unitToCheck;
 
 {
-	if ((["mine",_x] call BIS_fnc_inString && !(["remote",_x] call BIS_fnc_inString) && !(_x in rimmy_dam_var_removeFromMineArray)) || _x in rimmy_dam_var_ACEIEDExceptionArray) then {
+	private _current = toLower _x;
+	if (("mine" in _current && !("remote" in _current) && !(_x in rimmy_dam_var_removeFromMineArray)) || _x in rimmy_dam_var_ACEIEDExceptionArray) then {
 		_totalMineCount = _totalMineCount + 1;
 	};
 	
