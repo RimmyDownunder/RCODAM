@@ -12,8 +12,8 @@ _inventoryToCheck = _inventoryToCheck + backpackItems _x;
 } forEach units _groupToCheck;
 
 {
-private _current = toLower _x;
-if (("mine" in _current && !("remote" in _current) && !(_x in rimmy_dam_var_removeFromMineArray)) || _x in rimmy_dam_var_ACEIEDExceptionArray) then {
+private _currentItemToCheck = toLower _x;
+if (("mine" in _currentItemToCheck && !("remote" in _currentItemToCheck) && !(_x in rimmy_dam_var_removeFromMineArray)) || _x in rimmy_dam_var_ACEIEDExceptionArray) then {
 _totalMineCount = _totalMineCount + 1;
 };
 
