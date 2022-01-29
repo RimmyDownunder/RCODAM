@@ -9,12 +9,12 @@ private _debug = _module getVariable "RCODAM_debug";
 private _centreOfZone = getPos _module;
 
 _markerName = "PERMMinefieldExclusionAreaMarker" + _side + str (_centreOfZone select 0);
-_marker = createMarker [_markerName, _centreOfZone];
+_marker = createMarkerLocal [_markerName, _centreOfZone];
 
-_marker setMarkerShape "ELLIPSE";
-_marker setMarkerSize [_radiusX, _radiusY];
-_marker setMarkerAlpha 0;
-_marker setMarkerColor "ColorYellow";
+_marker setMarkerShapeLocal "ELLIPSE";
+_marker setMarkerSizeLocal [_radiusX, _radiusY];
+_marker setMarkerAlphaLocal 0;
+_marker setMarkerColorLocal "ColorYellow";
 
 if (_debug) then {
 	_marker setMarkerAlpha 0.5;

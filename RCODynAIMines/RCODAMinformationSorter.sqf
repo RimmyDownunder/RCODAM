@@ -216,9 +216,9 @@ if (_debugOption) then {
 	{
 		_markerIterator = _markerIterator + 1;
 		_markerName = "EnemyTaskforceTestMarker" + str _mineSide + str _markerIterator;
-		_marker = createMarker [_markerName, (_x select 0)];
+		_marker = createMarkerLocal [_markerName, (_x select 0)];
 		
-		_marker setMarkerColor "ColorRed";
+		_marker setMarkerColorLocal "ColorRed";
 		_marker setMarkerType "o_unknown";
 		
 		_debugMarkers pushBack _marker;
@@ -228,9 +228,9 @@ if (_debugOption) then {
 	{
 		_markerIterator = _markerIterator + 1;
 		_markerName = "FriendlyTaskforceTestMarker" + str _mineSide + str _markerIterator;
-		_marker = createMarker [_markerName, (_x select 0)];
+		_marker = createMarkerLocal [_markerName, (_x select 0)];
 		
-		_marker setMarkerColor "ColorBlue";
+		_marker setMarkerColorLocal "ColorBlue";
 		_marker setMarkerType "b_unknown";
 		
 		_debugMarkers pushBack _marker;
