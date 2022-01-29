@@ -190,8 +190,8 @@ _friendlyAreaMarkers = [];
 	
 	_marker setMarkerShapeLocal "ELLIPSE";
 	_marker setMarkerSizeLocal [800, 800];
-	_marker setMarkerAlphaLocal 0;
 	_marker setMarkerColorLocal "ColorBlue";
+	_marker setMarkerAlpha 0;
 	
 	if (_debugOption) then {
 		_marker setMarkerAlpha 0.7;
@@ -213,8 +213,8 @@ _enemyAreaMarkers = [];
 	
 	_marker setMarkerShapeLocal "ELLIPSE";
 	_marker setMarkerSizeLocal [800, 800];
-	_marker setMarkerAlphaLocal 0;
 	_marker setMarkerColorLocal "ColorRed";
+	_marker setMarkerAlpha 0;
 	
 	if (_debugOption) then {
 		_marker setMarkerAlpha 0.7;
@@ -320,8 +320,8 @@ _DAMdefenceTestingMarkers = [];
 	
 	_marker setMarkerShapeLocal "ELLIPSE";
 	_marker setMarkerSizeLocal [350, 350];
-	_marker setMarkerAlphaLocal 0;
 	_marker setMarkerColorLocal "ColorYellow";
+	_marker setMarkerAlpha 0;
 	
 	if (_debugOption) then {
 	_marker setMarkerAlpha 0.5;
@@ -394,8 +394,8 @@ _marker = createMarkerLocal [_markerName, _DAMinterceptMinefieldPlacement];
 
 _marker setMarkerShapeLocal "ELLIPSE";
 _marker setMarkerSizeLocal [350, 350];
-_marker setMarkerAlphaLocal 0;
 _marker setMarkerColorLocal "ColorYellow";
+_marker setMarkerAlpha 0;
 
 if (_debugOption) then {
 _marker setMarkerAlpha 0.5;
@@ -440,7 +440,7 @@ _DAMinterdictTestingMarkers = [];
 	
 	_marker setMarkerColorLocal "ColorBlack";  
 	_marker setMarkerTypeLocal "hd_dot";  
-	_marker setMarkerAlphaLocal 0;
+	_marker setMarkerAlpha 0;
 	
 	if (_debugOption) then {
 	_marker setMarkerAlpha 1;

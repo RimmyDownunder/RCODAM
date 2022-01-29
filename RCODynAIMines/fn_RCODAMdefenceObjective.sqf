@@ -74,8 +74,8 @@ _marker = createMarkerLocal [_markerName, _minefieldCentre];
 
 _marker setMarkerShapeLocal "ELLIPSE";
 _marker setMarkerSizeLocal [350, 350];
-_marker setMarkerAlphaLocal 0;
 _marker setMarkerColorLocal "ColorYellow";
+_marker setMarkerAlpha 0;
 
 if (missionNamespace getVariable format ["rimmy_dam_var_debugPerSide_%1", _mineSide]) then {
 	_marker setMarkerAlpha 0.5;
@@ -233,8 +233,8 @@ _marker = createMarkerLocal [_markerName, _minefieldCentre];
 
 _marker setMarkerShapeLocal "ELLIPSE";
 _marker setMarkerSizeLocal [350, 350];
-_marker setMarkerAlphaLocal 0;
 _marker setMarkerColorLocal "ColorYellow";
+_marker setMarkerAlpha 0;
 
 if (missionNamespace getVariable format ["rimmy_dam_var_debugPerSide_%1", _mineSide]) then {
 	_marker setMarkerAlpha 0.5;
@@ -285,8 +285,8 @@ _marker = createMarkerLocal [_markerName, _minefieldCentre];
 
 _marker setMarkerShapeLocal "ELLIPSE";
 _marker setMarkerSizeLocal [350, 350];
-_marker setMarkerAlphaLocal 0;
 _marker setMarkerColorLocal "ColorYellow";
+_marker setMarkerAlpha 0;
 
 if (missionNamespace getVariable format ["rimmy_dam_var_debugPerSide_%1", _mineSide]) then {
 	_marker setMarkerAlpha 0.5;

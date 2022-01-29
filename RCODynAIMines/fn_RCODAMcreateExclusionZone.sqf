@@ -13,8 +13,8 @@ _marker = createMarkerLocal [_markerName, _centreOfZone];
 
 _marker setMarkerShapeLocal "ELLIPSE";
 _marker setMarkerSizeLocal [_radiusX, _radiusY];
-_marker setMarkerAlphaLocal 0;
 _marker setMarkerColorLocal "ColorYellow";
+_marker setMarkerAlpha 0;
 
 if (_debug) then {
 	_marker setMarkerAlpha 0.5;
