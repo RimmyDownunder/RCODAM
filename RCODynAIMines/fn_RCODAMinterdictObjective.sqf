@@ -70,12 +70,12 @@ while {_numberOfMinesSpotsDecided < _numberOfMinesToLay} do {
 private _exclusionZoneSecondMaintenance = missionNamespace getVariable format ["rimmy_dam_var_minefieldExclusionZone_%1", _mineSide];
 
 private _markerName = "TEMPMinefieldExclusionAreaMarker" + str _mineSide + str ((_objective select 0) select 0);
-_marker = createMarker [_markerName, _minefieldCentre];
+_marker = createMarkerLocal [_markerName, _minefieldCentre];
 
-_marker setMarkerShape "ELLIPSE";
-_marker setMarkerSize [350, 350];
+_marker setMarkerShapeLocal "ELLIPSE";
+_marker setMarkerSizeLocal [350, 350];
+_marker setMarkerColorLocal "ColorYellow";
 _marker setMarkerAlpha 0;
-_marker setMarkerColor "ColorYellow";
 
 if (missionNamespace getVariable format ["rimmy_dam_var_debugPerSide_%1", _mineSide]) then {
 	_marker setMarkerAlpha 0.5;
@@ -229,12 +229,12 @@ _exclusionZoneMaintenance deleteAt _markerToRemoveCleanUp;
 deleteMarker _markerToRemove;
 
 private _markerName = "PLANTEDMinefieldExclusionAreaMarker" + str _mineSide + str (_minefieldCentre select 0);
-_marker = createMarker [_markerName, _minefieldCentre];
+_marker = createMarkerLocal [_markerName, _minefieldCentre];
 
-_marker setMarkerShape "ELLIPSE";
-_marker setMarkerSize [350, 350];
+_marker setMarkerShapeLocal "ELLIPSE";
+_marker setMarkerSizeLocal [350, 350];
+_marker setMarkerColorLocal "ColorYellow";
 _marker setMarkerAlpha 0;
-_marker setMarkerColor "ColorYellow";
 
 if (missionNamespace getVariable format ["rimmy_dam_var_debugPerSide_%1", _mineSide]) then {
 	_marker setMarkerAlpha 0.5;
@@ -281,12 +281,12 @@ _exclusionZoneMaintenance deleteAt _markerToRemoveCleanUp;
 deleteMarker _markerToRemove;
 
 _markerName = "PLANTEDMinefieldExclusionAreaMarker" + str _mineSide + str (_minefieldCentre select 0);
-_marker = createMarker [_markerName, _minefieldCentre];
+_marker = createMarkerLocal [_markerName, _minefieldCentre];
 
-_marker setMarkerShape "ELLIPSE";
-_marker setMarkerSize [350, 350];
+_marker setMarkerShapeLocal "ELLIPSE";
+_marker setMarkerSizeLocal [350, 350];
+_marker setMarkerColorLocal "ColorYellow";
 _marker setMarkerAlpha 0;
-_marker setMarkerColor "ColorYellow";
 
 if (missionNamespace getVariable format ["rimmy_dam_var_debugPerSide_%1", _mineSide]) then {
 	_marker setMarkerAlpha 0.5;

@@ -186,12 +186,12 @@ if (isMultiplayer) then {
 _friendlyAreaMarkers = [];
 {
 	_markerName = "FriendlyTaskforceAreaMarker" + str _mineSide + str (_x select 0);
-	_marker = createMarker [_markerName, (_x select 0)];
+	_marker = createMarkerLocal [_markerName, (_x select 0)];
 	
-	_marker setMarkerShape "ELLIPSE";
-	_marker setMarkerSize [800, 800];
+	_marker setMarkerShapeLocal "ELLIPSE";
+	_marker setMarkerSizeLocal [800, 800];
+	_marker setMarkerColorLocal "ColorBlue";
 	_marker setMarkerAlpha 0;
-	_marker setMarkerColor "ColorBlue";
 	
 	if (_debugOption) then {
 		_marker setMarkerAlpha 0.7;
@@ -209,12 +209,12 @@ _enemyAreaMarkers = [];
 	
 {
 	_markerName = "EnemyTaskforceAreaMarker" + str _mineSide + str ((_x select 0) select 0);
-	_marker = createMarker [_markerName, (_x select 0)];
+	_marker = createMarkerLocal [_markerName, (_x select 0)];
 	
-	_marker setMarkerShape "ELLIPSE";
-	_marker setMarkerSize [800, 800];
+	_marker setMarkerShapeLocal "ELLIPSE";
+	_marker setMarkerSizeLocal [800, 800];
+	_marker setMarkerColorLocal "ColorRed";
 	_marker setMarkerAlpha 0;
-	_marker setMarkerColor "ColorRed";
 	
 	if (_debugOption) then {
 		_marker setMarkerAlpha 0.7;
@@ -251,12 +251,12 @@ _DAMdefenceTestingMarkers = [];
 	
 	_markerIterator = _markerIterator + 1;  
 	_markerName = "DAMdefenceTestMarker" + str _markerIterator;  
-	_marker = createMarker [_markerName, _nextMarker];  
+	_marker = createMarkerLocal [_markerName, _nextMarker];  
 	_DAMdefenceTestingMarkers pushBack _marker;
 	
-	_marker setMarkerColor "ColorBlack";  
-	_marker setMarkerType "hd_dot";  
-	_marker setMarkerAlpha 0;
+	_marker setMarkerColorLocal "ColorBlack";  
+	_marker setMarkerTypeLocal "hd_dot";  
+	_marker setMarkerAlphaLocal 0;
 	
 	if (_debugOption) then {
 	_marker setMarkerAlpha 1;
@@ -316,12 +316,12 @@ _DAMdefenceTestingMarkers = [];
 	// Minefield Exclusion Zone
 	
 	_markerName = "TEMPMinefieldExclusionAreaMarker" + str _mineSide + str (_DAMdefenceMinefieldPlacement select 0);
-	_marker = createMarker [_markerName, _DAMdefenceMinefieldPlacement];
+	_marker = createMarkerLocal [_markerName, _DAMdefenceMinefieldPlacement];
 	
-	_marker setMarkerShape "ELLIPSE";
-	_marker setMarkerSize [350, 350];
+	_marker setMarkerShapeLocal "ELLIPSE";
+	_marker setMarkerSizeLocal [350, 350];
+	_marker setMarkerColorLocal "ColorYellow";
 	_marker setMarkerAlpha 0;
-	_marker setMarkerColor "ColorYellow";
 	
 	if (_debugOption) then {
 	_marker setMarkerAlpha 0.5;
@@ -333,9 +333,9 @@ _DAMdefenceTestingMarkers = [];
 	
 	if (_debugOption) then {
 	_markerName = "DefenceObjectiveMarker" + str _DAMdefenceMinefieldPlacement;  
-	_marker = createMarker [_markerName, _DAMdefenceMinefieldPlacement]; 
-	_marker setMarkerColor "ColorBlack";  
-	_marker setMarkerType "hd_dot"; 
+	_marker = createMarkerLocal [_markerName, _DAMdefenceMinefieldPlacement]; 
+	_marker setMarkerColorLocal "ColorBlack";  
+	_marker setMarkerTypeLocal "hd_dot"; 
 	_marker setMarkerText "Defence Objective";	
 	_testerObjectiveAreaMarkers pushBack _marker;
 	};
@@ -390,12 +390,12 @@ _DAMinterceptObjectiveList pushBack [_DAMinterceptMinefieldPlacement,_DAMinterce
 // Minefield Exclusion Zone
 	
 _markerName = "TEMPMinefieldExclusionAreaMarker" + str _mineSide + str (_DAMinterceptMinefieldPlacement select 0);
-_marker = createMarker [_markerName, _DAMinterceptMinefieldPlacement];
+_marker = createMarkerLocal [_markerName, _DAMinterceptMinefieldPlacement];
 
-_marker setMarkerShape "ELLIPSE";
-_marker setMarkerSize [350, 350];
+_marker setMarkerShapeLocal "ELLIPSE";
+_marker setMarkerSizeLocal [350, 350];
+_marker setMarkerColorLocal "ColorYellow";
 _marker setMarkerAlpha 0;
-_marker setMarkerColor "ColorYellow";
 
 if (_debugOption) then {
 _marker setMarkerAlpha 0.5;
@@ -407,9 +407,9 @@ missionNamespace setVariable [format ["rimmy_dam_var_minefieldExclusionZone_%1",
 
 if (_debugOption) then {
 _markerName = "InterceptObjectiveMarker" + str _DAMinterceptMinefieldPlacement;  
-_marker = createMarker [_markerName, _DAMinterceptMinefieldPlacement]; 
-_marker setMarkerColor "ColorBlue";  
-_marker setMarkerType "hd_dot"; 
+_marker = createMarkerLocal [_markerName, _DAMinterceptMinefieldPlacement]; 
+_marker setMarkerColorLocal "ColorBlue";  
+_marker setMarkerTypeLocal "hd_dot"; 
 _marker setMarkerText "Intercept Objective";	
 _testerObjectiveAreaMarkers pushBack _marker;
 };
@@ -435,11 +435,11 @@ _DAMinterdictTestingMarkers = [];
 	
 	_markerIterator = _markerIterator + 1;  
 	_markerName = "DAMinterdictTestMarker" + str _markerIterator;  
-	_marker = createMarker [_markerName, _nextMarker];  
+	_marker = createMarkerLocal [_markerName, _nextMarker];  
 	_DAMinterdictTestingMarkers pushBack _marker;
 	
-	_marker setMarkerColor "ColorBlack";  
-	_marker setMarkerType "hd_dot";  
+	_marker setMarkerColorLocal "ColorBlack";  
+	_marker setMarkerTypeLocal "hd_dot";  
 	_marker setMarkerAlpha 0;
 	
 	if (_debugOption) then {
@@ -499,12 +499,12 @@ _DAMinterdictTestingMarkers = [];
 	// Minefield Exclusion Zone
 	
 	_markerName = "TEMPMinefieldExclusionAreaMarker" + str _mineSide + str (_DAMinterdictMinefieldPlacement select 0);
-	_marker = createMarker [_markerName, _DAMinterdictMinefieldPlacement];
+	_marker = createMarkerLocal [_markerName, _DAMinterdictMinefieldPlacement];
 
-	_marker setMarkerShape "ELLIPSE";
-	_marker setMarkerSize [350, 350];
-	_marker setMarkerAlpha 0;
-	_marker setMarkerColor "ColorYellow";
+	_marker setMarkerShapeLocal "ELLIPSE";
+	_marker setMarkerSizeLocal [350, 350];
+	_marker setMarkerAlphaLocal 0;
+	_marker setMarkerColorLocal "ColorYellow";
 	
 	if (_debugOption) then {
 	_marker setMarkerAlpha 0.5;
@@ -516,9 +516,9 @@ _DAMinterdictTestingMarkers = [];
 	
 	if (_debugOption) then {
 	_markerName = "InterdictObjectiveMarker" + str _DAMinterdictMinefieldPlacement;  
-	_marker = createMarker [_markerName, _DAMinterdictMinefieldPlacement]; 
-	_marker setMarkerColor "ColorGreen";  
-	_marker setMarkerType "hd_dot"; 
+	_marker = createMarkerLocal [_markerName, _DAMinterdictMinefieldPlacement]; 
+	_marker setMarkerColorLocal "ColorGreen";  
+	_marker setMarkerTypeLocal "hd_dot"; 
 	_marker setMarkerText "Interdict Objective";	
 	_testerObjectiveAreaMarkers pushBack _marker;
 	};
